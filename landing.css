@@ -381,7 +381,7 @@ footer {
 
 .research-figure {
     width: 100%;
-    max-width: 220px;
+    max-width: 140px;
     height: auto;
     border-radius: 8px;
     border: 1px solid var(--border-color);
