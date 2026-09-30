@@ -308,3 +308,47 @@ footer {
         grid-template-columns: 1fr; 
     }
 }
+
+/* -------------------------------------------------------------------
+   8. Small Action Buttons & Publication Badges
+------------------------------------------------------------------- */
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-sm {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 6px 14px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.btn-sm:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+.btn-sm.muted {
+    background-color: #f0f2f0;
+    color: #7a8a80;
+    border-color: #e0e6e1;
+    cursor: default;
+}
+
+.btn-sm.muted:hover {
+    transform: none;
+    background-color: #f0f2f0;
+    color: #7a8a80;
+}
