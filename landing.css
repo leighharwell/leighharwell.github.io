@@ -352,3 +352,55 @@ footer {
     background-color: #f0f2f0;
     color: #7a8a80;
 }
+
+/* -------------------------------------------------------------------
+   9. Side-by-Side Content Layout for Research Entries
+------------------------------------------------------------------- */
+.project-card-with-media {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.project-main-content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.project-text {
+    flex: 2;
+}
+
+.project-media {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.research-figure {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-soft);
+    object-fit: cover;
+}
+
+/* Mobile Stack View */
+@media (max-width: 650px) {
+    .project-main-content {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .project-media {
+        width: 100%;
+    }
+
+    .research-figure {
+        max-width: 100%;
+    }
+}
