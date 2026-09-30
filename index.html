@@ -3,42 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Academic Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>G. Leigh Harwell | Academic Portfolio</title>
+    <link rel="stylesheet" href="landing.css">
 </head>
 <body>
 
     <!-- Header Navigation -->
-    <header>
-        <nav>
-            <div class="logo">Your Name</div>
+    <header class="main-header">
+        <nav class="centered-nav">
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications/Projects</a></li>
-                <li><a href="#cv">CV</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" class="nav-btn">Home</a></li>
+                <li><a href="#projects" class="nav-btn">Research</a></li>
+                <li><a href="#cv" class="nav-btn">My CV</a></li>
+                <li><a href="#contact" class="nav-btn">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
+    <main class="landing-container">
         
         <!-- About Me Section -->
-        <section id="about" class="profile-section">
-            <div class="bio-text">
-                <h1>Hi, I'm Your Name</h1>
-                <p class="subtitle">Prospective Ph.D. / M.S. Student in [Your Field]</p>
-                <p>Write a brief 3-4 sentence summary here. State your foundational background, what major questions drive your academic curiosity, and that you are actively seeking graduate opportunities for Fall [Year].</p>
-            </div>
-            <div class="bio-image">
-                <!-- Place a professional headshot named headshot.jpg in your folder -->
-                #<img src="headshot.jpg" alt="Your Name Headshot" onerror="this.style.display='none'">
+        <section id="about" class="hero-section">
+            <div class="hero-content">
+                <div class="profile-frame">
+                    <img src="images/headshot.jpg" alt="G. Leigh Harwell Headshot" class="profile-photo">
+                </div>
+                <div class="profile-text">
+                    <h1>G. Leigh Harwell</h1>
+                    <p class="subtitle">Astrophysics Undergraduate | Machine Learning in Asteroseismology & Compact Binary Systems</p>
+                    <p class="summary">I am an astrophysics undergraduate researcher at the University of Oklahoma (B.S. Astrophysics, Minor in Mathematics, Expected May 2027) exploring stellar astronomy and compact binary systems. My work leverages data-driven algorithmic models and machine learning to analyze multi-messenger observational data, asteroseismology, and galactic archaeology. I am actively seeking graduate research opportunities and Ph.D. programs for Fall 2027.</p>
+                </div>
             </div>
         </section>
 
         <!-- Research Interests -->
-        <section id="research">
+        <section id="research-interests" class="content-section">
             <h2>Research Interests</h2>
             <div class="interests-grid">
                 <div class="card">
@@ -52,52 +51,57 @@
             </div>
         </section>
 
-        <!-- Publications & Selected Projects -->
-        <section id="publications">
+        <!-- Research & Leadership Projects -->
+        <section id="projects" class="content-section">
             <h2>Research Projects & Experience</h2>
             <ul class="project-list">
                 <li>
-                    <strong>"Multi-Messanger Observations of Compact Objects"</strong>
+                    <strong>"Characterization of Double White Dwarf Star Systems"</strong>
                     <br><small>Department of Physics and Astronomy, University of Oklahoma | August 2026 – Present</small>
-                    <p>Characterizing double white dwarf systems through multi messenger observations.</p>
-                    <p>Analyze multi messenger datasets to identify compact binary candidates for follow-up observational studies.</p>
+                    <p>Characterizing double white dwarf binary systems through multi-messenger observational data to constrain system properties and orbital dynamics. Analyzing photometric and gravitational wave datasets to identify compact binary candidates for follow-up observational studies.</p>
                 </li>
                 <li>
                     <strong>"Stellar Label Estimation via 'TheCannon' Data-Driven Model"</strong>
                     <br><small>NSF Research Experience for Undergraduates (REU) | June 2026 – July 2026</small>
-                    <p>Implemented <em>TheCannon</em> data driven model to estimate stellar parameters in Astroseismolog with elemental abundances from spectroscopic data.</p>
+                    <p>Implemented <em>TheCannon</em> data-driven algorithmic model to estimate fundamental stellar parameters and elemental abundances from spectroscopic datasets in asteroseismology.</p>
                 </li>
                 <li>
                     <strong>"Machine Learning, Asteroseismology, and Galactic Archaeology"</strong>
-                    <br><small>University of Oklahoma | October 2024 – October 2026</small>
-                    <p>Apply machine learning techniques to asteroseismology and galactic archaeology datasets to improve stellar classification models.</p>
+                    <br><small>Department of Physics and Astronomy, University of Oklahoma | October 2024 – October 2026</small>
+                    <p>Applied machine learning classification algorithms to asteroseismic and galactic archaeology datasets to refine stellar classification models and automated spectroscopic processing pipelines in Python.</p>
+                </li>
+                <li>
+                    <strong>"Physics for Life Sciences Tutor Coordinator & PLA"</strong>
+                    <br><small>Student Learning Center, University of Oklahoma | August 2025 – Present</small>
+                    <p>Coordinate physics tutoring operations for life science majors, developing custom problem sets, conceptual worksheets, and exam review materials tailored to biological applications.</p>
                 </li>
             </ul>
         </section>
 
         <!-- CV Section -->
-        <section id="cv">
+        <section id="cv" class="content-section cv-section">
             <h2>Curriculum Vitae</h2>
             <p>You can view my complete academic history below or download the document directly.</p>
-            <a href="CV_Resume.pdf" class="btn" download>📥 Download CV (PDF)</a>
-            <div class="cv-preview">
-                <!-- An embedded iframe allows professors to scroll your CV directly on the page -->
-                <iframe src="CV_Resume.pdf" width="100%" height="500px"></iframe>
+            <div class="cv-actions">
+                <a href="cv/G_Leigh_Harwell_CV.pdf" class="download-btn" download>📥 Download CV (PDF)</a>
+            </div>
+            <div class="cv-iframe-container">
+                <iframe src="cv/G_Leigh_Harwell_CV.pdf#view=FitH" width="100%" height="700px" title="G. Leigh Harwell CV Preview"></iframe>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact">
+        <section id="contact" class="content-section contact-section">
             <h2>Get In Touch</h2>
-            <p>I am actively looking for advisors and research groups. Feel free to reach out via email.</p>
-            <p>📧 <strong>Email:</strong> your.email@institution.edu</p>
-            <p>🔗 <strong>Profiles:</strong> <a href="#">GitHub</a> | <a href="#">LinkedIn</a> | <a href="#">Google Scholar</a></p>
+            <p>I am actively looking for research advisors and graduate groups for Fall 2027. Feel free to reach out via email.</p>
+            <p>📧 <strong>Email:</strong> <a href="mailto:harwell.gwen@gmail.com">harwell.gwen@gmail.com</a></p>
+            <p>🔗 <strong>Profiles:</strong> <a href="https://github.com" target="_blank">GitHub</a> | <a href="https://linkedin.com" target="_blank">LinkedIn</a></p>
         </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2026 Your Name. Built with HTML/CSS and hosted via GitHub Pages.</p>
+        <p>&copy; 2026 G. Leigh Harwell. Built with HTML/CSS and hosted via GitHub Pages.</p>
     </footer>
 
 </body>
