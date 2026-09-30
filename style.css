@@ -1,120 +1,274 @@
+/*--------------------------------------------------------------
+  Academic Landing Page Styles (landing.css)
+--------------------------------------------------------------*/
+
+/* Base Styles & Typography */
 :root {
-    --primary-color: #003366; /* Academic Blue */
-    --text-color: #333333;
-    --bg-color: #fcfcfc;
-    --card-bg: #ffffff;
-    --border-color: #e0e0e0;
+    --primary-bg: #FFFFFF;
+    --secondary-bg: #F9FAFB;
+    --accent-color: #004F9F; /* Strong Academic Blue */
+    --text-main: #2D3748;
+    --text-muted: #718096;
+    --header-font: 'Georgia', serif; /* Classic academic serif for titles */
+    --body-font: 'Calibri', 'Arial', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling when navigation is clicked */
+    font-size: 16px;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: var(--text-color);
-    background-color: var(--bg-color);
+    font-family: var(--body-font);
+    color: var(--text-main);
+    background-color: var(--primary-bg);
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+h1, h2, h3 {
+    font-family: var(--header-font);
+    font-weight: normal;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
 }
 
-header {
-    background-color: #ffffff;
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #003366; /* Darker blue on hover */
+}
+
+/*--------------------------------------------------------------
+  1. Main Navigation Header (Top Buttons)
+--------------------------------------------------------------*/
+.main-header {
+    width: 100%;
+    background-color: var(--primary-bg);
+    position: fixed; /* Sticky navigation */
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    padding: 1rem 0;
+    border-bottom: 1px solid #E2E8F0;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 15px 20px;
-}
-
-nav ul {
+.centered-nav ul {
     list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
+    justify-content: center; /* Centered buttons */
+    gap: 1.5rem; /* Spacing between buttons */
 }
 
-nav ul li {
-    margin-left: 20px;
+.nav-btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: var(--accent-color);
+    border-radius: 4px; /* Slightly rounded edges */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border: 2px solid var(--accent-color);
 }
 
-nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
+.nav-btn:hover {
+    background-color: #003366; /* Hover color change */
+    color: #FFFFFF;
+    transform: translateY(-2px); /* Slight lift animation */
 }
 
-nav a:hover {
-    color: var(--primary-color);
-}
-
-section {
-    padding: 40px 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.profile-section {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
-
-.bio-text { flex: 2; }
-.bio-image { flex: 1; }
-
-.bio-image img {
+/*--------------------------------------------------------------
+  2. The Landing Hero Section (About Section)
+--------------------------------------------------------------*/
+.landing-container {
+    margin-top: 80px; /* Offset for sticky header */
     width: 100%;
-    border-radius: 50%;
-    border: 3px solid var(--primary-color);
 }
 
-.interests-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 20px;
+.hero-section {
+    min-height: 90vh; /* Primary focus on load */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-bg);
+    padding: 2rem;
 }
 
-.card {
-    background: var(--card-bg);
-    padding: 20px;
-    border-radius: 6px;
-    border: 1px solid var(--border-color);
+.hero-content {
+    display: flex;
+    max-width: 1000px;
+    gap: 3rem;
+    align-items: center;
+    text-align: left;
 }
 
-.btn {
+.profile-photo {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%; /* Circle shape */
+    object-fit: cover;
+    border: 8px solid #FFFFFF;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-text h1 {
+    font-size: 3.5rem; /* Large name */
+    margin-bottom: 0.5rem;
+}
+
+.profile-text .subtitle {
+    font-size: 1.25rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.profile-text .summary {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 600px;
+}
+
+/*--------------------------------------------------------------
+  3. Content Sections (Research, CV, Contact)
+--------------------------------------------------------------*/
+.content-section {
+    width: 100%;
+    padding: 5rem 1rem;
+    background-color: var(--secondary-bg); /* Alternate background */
+}
+
+/* Set standard width for content blocks */
+.content-section h2,
+.content-section .project-list,
+.content-section .cv-actions,
+.content-section p,
+.content-section .cv-iframe-container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Project Cards */
+.project-card {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+    transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.project-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.25rem;
+}
+
+.project-venue {
+    color: var(--accent-color);
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* CV Section */
+.cv-section {
+    background-color: var(--primary-bg); /* White bg */
+    text-align: center;
+}
+
+.cv-actions {
+    margin: 2rem auto;
+}
+
+.download-btn {
     display: inline-block;
-    background: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
+    padding: 0.8rem 1.8rem;
+    background-color: #4CAF50; /* Strong Green */
+    color: #FFFFFF;
     border-radius: 4px;
-    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease;
 }
 
-.btn-sm {
-    display: inline-block;
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-    padding: 4px 10px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    margin-right: 5px;
+.download-btn:hover {
+    background-color: #388E3C;
+    color: #FFFFFF;
 }
 
-@media (max-width: 600px) {
-    .profile-section { flex-direction: column-reverse; text-align: center; }
+.cv-iframe-container {
+    margin-top: 2rem;
+    border: 1px solid #E2E8F0;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/*--------------------------------------------------------------
+  4. Footer
+--------------------------------------------------------------*/
+footer {
+    width: 100%;
+    background-color: #2D3748;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+/*--------------------------------------------------------------
+  Responsive Adjustments (for Mobile)
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+    .centered-nav ul {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 0.5rem;
+    }
+
+    .hero-content {
+        flex-direction: column; /* Move image above text */
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-text h1 {
+        font-size: 2.5rem;
+    }
+}
     .interests-grid { grid-template-columns: 1fr; }
 }
