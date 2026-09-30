@@ -378,7 +378,7 @@ footer {
 
 .project-media {
     flex-shrink: 0; /* Prevents image wrapper from expanding */
-    width: 180px;   /* Fixed container width for the image */
+    width: 200px;   /* Fixed container width for the image */
 }
 
 .research-figure {
