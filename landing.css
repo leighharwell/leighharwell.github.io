@@ -464,18 +464,3 @@ footer {
     color: #ffffff;
     border-color: #333333;
 }
-
-/* -------------------------------------------------------------------
-   12. GitHub Repository Button Variant
-------------------------------------------------------------------- */
-.btn-sm.github-btn {
-    background-color: #24292e;
-    color: #ffffff;
-    border-color: #24292e;
-}
-
-.btn-sm.github-btn:hover {
-    background-color: #333333;
-    color: #ffffff;
-    border-color: #333333;
-}
