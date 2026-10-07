@@ -401,3 +401,23 @@ footer {
         max-width: 180px;
     }
 }
+
+/* -------------------------------------------------------------------
+   10. Fellowship Badges & Tags
+------------------------------------------------------------------- */
+.fellowship-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 12px 0;
+}
+
+.fellowship-tag {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
