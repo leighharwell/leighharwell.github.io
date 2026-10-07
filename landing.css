@@ -421,3 +421,34 @@ footer {
     border-radius: 12px;
     border: 1px solid var(--border-color);
 }
+
+/* -------------------------------------------------------------------
+   11. Embedded Document Previews (Slides & Poster)
+------------------------------------------------------------------- */
+.preview-container {
+    margin-top: 20px;
+    width: 100%;
+    border-top: 1px dashed var(--border-color);
+    padding-top: 16px;
+}
+
+.preview-title {
+    margin: 0 0 12px 0;
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.embed-wrapper {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    background-color: #ffffff;
+}
+
+.embed-wrapper object,
+.embed-wrapper iframe {
+    border: none;
+    display: block;
+}
